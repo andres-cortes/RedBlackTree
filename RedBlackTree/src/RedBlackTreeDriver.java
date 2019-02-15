@@ -41,7 +41,9 @@ public class RedBlackTreeDriver
 
 	public static void main(String[] args)
 	{
-		// tests here
+		// tests here**************************************8
+
+		// example test
 		RedBlackTree rbt = new RedBlackTree();
 		// added letters: abcdefghi
 		rbt.insert("a");
@@ -56,7 +58,6 @@ public class RedBlackTreeDriver
 		rbt.insert("i");
 		String expected = "abcdefghi";
 		System.out.println("Expected: " + expected + ", Actual: " + makeOrderedString(rbt));
-
 		System.out.println("Found a: " + (rbt.lookup("a").getData() != null));
 	}
 }
