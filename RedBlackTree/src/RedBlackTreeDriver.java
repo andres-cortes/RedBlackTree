@@ -41,7 +41,7 @@ public class RedBlackTreeDriver
 
 	public static void main(String[] args)
 	{
-		// tests here**************************************8
+		// tests here**************************************
 
 		// example test
 		RedBlackTree rbt = new RedBlackTree();
