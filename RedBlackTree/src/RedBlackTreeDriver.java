@@ -42,22 +42,77 @@ public class RedBlackTreeDriver
 	public static void main(String[] args)
 	{
 		// tests here**************************************
-
-		// example test
+		String expected;
+		// Test 1
 		RedBlackTree rbt = new RedBlackTree();
-		// added letters: abcdefghi
 		rbt.insert("a");
 		rbt.insert("b");
-		rbt.insert("a");
 		rbt.insert("c");
 		rbt.insert("d");
-		rbt.insert("h");
-		rbt.insert("g");
 		rbt.insert("e");
 		rbt.insert("f");
-		rbt.insert("i");
-		String expected = "abcdefghi";
+		expected = "abcdef";
 		System.out.println("Expected: " + expected + ", Actual: " + makeOrderedString(rbt));
-		System.out.println("Found a: " + (rbt.lookup("a").getData() != null));
+
+		// Test 2
+		rbt = new RedBlackTree();
+		rbt.insert("a");
+		rbt.insert("b");
+		rbt.insert("c");
+		rbt.insert("d");
+		rbt.insert("e");
+		rbt.insert("f");
+		rbt.insert("g");
+		rbt.insert("h");
+		rbt.insert("i");
+		rbt.insert("j");
+		rbt.insert("k");
+		rbt.insert("l");
+		rbt.insert("m");
+		expected = "abcdefghijklm";
+		System.out.println("Expected: " + expected + ", Actual: " + makeOrderedString(rbt));
+
+		// Test 3
+		rbt = new RedBlackTree();
+		rbt.insert("c");
+		rbt.insert("e");
+		rbt.insert("f");
+		rbt.insert("a");
+		rbt.insert("b");
+		rbt.insert("d");
+		expected = "abcdef";
+		System.out.println("Expected: " + expected + ", Actual: " + makeOrderedString(rbt));
+
+		// Test 4
+		rbt = new RedBlackTree();
+		rbt.insert("f");
+		rbt.insert("e");
+		rbt.insert("d");
+		rbt.insert("c");
+		rbt.insert("b");
+		rbt.insert("a");
+		expected = "abcdef";
+		System.out.println("Expected: " + expected + ", Actual: " + makeOrderedString(rbt));
+
+		// Test 5
+		rbt = new RedBlackTree();
+		rbt.insert("1");
+		rbt.insert("a");
+		rbt.insert("b");
+		rbt.insert("c");
+		rbt.insert("d");
+		expected = "1abcd";
+		System.out.println("Expected: " + expected + ", Actual: " + makeOrderedString(rbt));
+
+		// Test 6
+		rbt = new RedBlackTree();
+		rbt.insert("1");
+		rbt.insert("2");
+		rbt.insert("3");
+		rbt.insert("4");
+		rbt.insert("5");
+		expected = "12345";
+		System.out.println("Expected: " + expected + ", Actual: " + makeOrderedString(rbt));
+
 	}
 }
