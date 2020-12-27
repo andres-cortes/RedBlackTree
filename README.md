@@ -1,7 +1,7 @@
 # RedBlackTree
 ### For CS 146 Data Structures and Algorithms at SJSU
 
-###The project description is as follows:
+The project description is as follows:
 
 In this project you will create a Dictionary, aka a Red Black Tree. Using the provided link to a
 dictionary, insert all the words in a Red Black Tree. Create a new file with a poem and use the
